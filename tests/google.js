@@ -1,10 +1,12 @@
 const directoryCleaner = require('./../utils/directorycleaner.js')
 
-directoryCleaner.cleaner();
-
 module.exports = {
 
-    tags: ['google'],
+    before: function (browser) {
+        directoryCleaner.cleaner();
+    },
+
+    '@tags': ['google'],
     'Google advanced search: Elon Musk': function (browser) {
 
         const mainQuery = 'Elon Musk';
@@ -26,14 +28,18 @@ module.exports = {
             .click(languageDropdownValueSelector)
             .click(lastUpdateDropdownOpenerSelector)
             .click(lastUpdateDropdownValueSelector)
+            .perform(() => {
+                debugger
+            })
             .click(submitButtonSelector)
             .assert.urlContains('as_q=Elon+Musk', 'Query is Elon Musk')
             .assert.urlContains('lr=lang_it', 'Language is Italian')
             .assert.urlContains('as_qdr=m', 'Time period is last month')
             .assert.visible(resultsPageQuerySelector, 'UI: Elon Musk is in the query input')
             .saveScreenshot(`tests_output/${date.getTime()}check.png`)
-            .assert.containsText(resultPageLanguageSelector, 'Search Italian pages','UI: Language is set to Italian')
-            .assert.containsText(resultPageLastUpdateSelector, 'Past month','UI: Last update is set to Past Month')
+            .assert.containsText(resultPageLanguageSelector, 'Search Italian pages', 'UI: Language is set to Italian')
+            .assert.containsText(resultPageLastUpdateSelector, 'Past month', 'UI: Last update is set to Past Month')
             .saveScreenshot(`tests_output/${date.getTime()}google.png`)
+            .end();
     }
 };
