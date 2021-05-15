@@ -1,0 +1,11 @@
+1620927553199	geckodriver	INFO	Listening on 127.0.0.1:4444
+1620927553507	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\DMITRY~1\\AppData\\Local\\Temp\\rust_mozprofilecb9XVP"
+1620927553767	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1620927555534	Marionette	INFO	Listening on port 50677
+JavaScript warning: https://nightwatchjs.org/js/app/guide/guide.js, line 147: unreachable code after return statement
+Unable to read VR Path Registry from C:\Users\Dmitry_Shimansky1\AppData\Local\openvr\openvrpaths.vrpath
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1620927561835	Marionette	INFO	Stopped listening on port 50677
