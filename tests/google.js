@@ -7,6 +7,7 @@ module.exports = {
     },
 
     '@tags': ['google'],
+    '@disabled': true,
     'Google advanced search: Elon Musk': function (browser) {
         const date = new Date();
         const mainQuery = 'Elon Musk';

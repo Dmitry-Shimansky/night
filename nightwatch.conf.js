@@ -29,8 +29,9 @@ module.exports = {
 
             screenshots: {
                 enabled: true,
-                path: 'screens',
-                on_failure: true
+                path: 'tests_output/screenshots',
+                on_failure: true,
+                on_error: true
             },
 
             desiredCapabilities: {
@@ -43,9 +44,9 @@ module.exports = {
                         '--no-sandbox',
                         '--ignore-certificate-errors',
                         '--start-maximized',
-                        '--lang=en-GB'
+                        '--lang=en-GB',
                         //'--allow-insecure-localhost',
-                        //'--headless'
+                        '--headless'
                     ]
                 }
             },
