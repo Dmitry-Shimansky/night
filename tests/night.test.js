@@ -1,7 +1,7 @@
 module.exports = {
 
     tags: ['nightwatch'],
-
+    '@disabled': true,
     'On testing nightwatch': function (browser) {
 
         browser

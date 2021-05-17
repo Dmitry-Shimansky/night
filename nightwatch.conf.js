@@ -46,7 +46,7 @@ module.exports = {
                         '--start-maximized',
                         '--lang=en-GB',
                         //'--allow-insecure-localhost',
-                        '--headless'
+                        // '--headless'
                     ]
                 }
             },
