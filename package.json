@@ -5,11 +5,12 @@
   "main": "index.js",
   "scripts": {
     "test": "nightwatch",
-    "debug": "node --inspect-brk node_modules/.bin/nightwatch",
+    "debug": "node --inspect-brk node_modules/.bin/nightwatch.cmd",
     "test:browserstack": "nightwatch -c nightwatch.browserstack.conf.js",
     "test:vrt": "nightwatch -c nightwatch.vrt.conf.js",
     "consolidate:vrt": "CONSOLIDATE=1 npm run test:vrt",
-    "test:cucumber": "cucumber-js --require cucumber.conf.js --require step-definitions --format node_modules/cucumber-pretty"
+    "test:cucumber": "cucumber-js --require cucumber.conf.js --require step-definitions --format node_modules/cucumber-pretty",
+    "test:selenium": "nightwatch -c nightwatch.selenium.conf.js"
   },
   "keywords": [],
   "author": "",
@@ -19,11 +20,13 @@
     "cucumber": "^5.1.0",
     "cucumber-pretty": "^1.5.2",
     "geckodriver": "^1.22.3",
+    "iedriver": "^3.150.1",
     "nightwatch": "^1.6.4",
     "nightwatch-api": "^3.0.2",
+    "nightwatch-vrt": "^0.2.10",
     "selenium-server": "^3.141.59"
   },
   "dependencies": {
-    "nightwatch-vrt": "^0.2.10"
+    "handlebars": "^4.7.7"
   }
 }

@@ -1,7 +1,7 @@
 module.exports = {
 
-    tags: ['nightwatch'],
-    '@disabled': true,
+    '@tags': ['nightwatch'],
+    // '@disabled': true,
     'On testing nightwatch': function (browser) {
 
         browser
@@ -12,10 +12,13 @@ module.exports = {
 
         browser
             .waitForElementVisible('#navigation li:nth-child(2)')
+            .perform(() => {
+                debugger
+            })
             .click('#navigation li:nth-child(2)')
             .assert.visible('.alert.alert-warning.nightwatch')
-            .pause(2000);
+            .pause(2000)
 
-        browser.end();
+            .end();
     }
 };

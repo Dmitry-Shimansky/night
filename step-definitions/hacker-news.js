@@ -4,6 +4,9 @@ const { Given, Then, When } = require('cucumber');
 Given(/^I open Hacker News's home page$/, () => {
     return client
         .url('http://news.ycombinator.com')
+        .perform(() => {
+            debugger
+        })
         .waitForElementVisible('body', 1000);
 });
 
